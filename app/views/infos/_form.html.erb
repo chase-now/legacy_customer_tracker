@@ -1,103 +1,568 @@
-<%= simple_form_for(@info) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :Address1 %>
-    <%= f.input :Address2 %>
-    <%= f.input :AnyFlag %>
-    <%= f.input :AuthNo %>
-    <%= f.input :BillingAddress1 %>
-    <%= f.input :BillingAddress2 %>
-    <%= f.input :BillingCity %>
-    <%= f.input :BillingCompany %>
-    <%= f.input :BillingCountry %>
-    <%= f.input :BillingEmail %>
-    <%= f.input :BillingEmail2 %>
-    <%= f.input :BillingFirstName %>
-    <%= f.input :BillingLastName %>
-    <%= f.input :BillingPhone %>
-    <%= f.input :BillingState %>
-    <%= f.input :BillingZipCode %>
-    <%= f.input :CardNumber %>
-    <%= f.input :CashRecvd %>
-    <%= f.input :CheckNumber %>
-    <%= f.input :City %>
-    <%= f.input :Cnt2 %>
-    <%= f.input :Cnt1 %>
-    <%= f.input :Cnt3 %>
-    <%= f.input :Cnt4 %>
-    <%= f.input :Cnt5 %>
-    <%= f.input :Cnt6 %>
-    <%= f.input :Cnt8 %>
-    <%= f.input :Cnt9 %>
-    <%= f.input :Cnt10 %>
-    <%= f.input :Comment %>
-    <%= f.input :Company %>
-    <%= f.input :Conference %>
-    <%= f.input :Country %>
-    <%= f.input :CustPONo %>
-    <%= f.input :CustType %>
-    <%= f.input :Deleted %>
-    <%= f.input :DidAffil %>
-    <%= f.input :DidCCRpt %>
-    <%= f.input :DidEmail %>
-    <%= f.input :DidPrint %>
-    <%= f.input :DidShort %>
-    <%= f.input :DidVisa %>
-    <%= f.input :Done %>
-    <%= f.input :Email %>
-    <%= f.input :Email2 %>
-    <%= f.input :ExpirDate %>
-    <%= f.input :FECustNum %>
-    <%= f.input :FirstName %>
-    <%= f.input :Flag1 %>
-    <%= f.input :Flag2 %>
-    <%= f.input :Flag8 %>
-    <%= f.input :Flag9 %>
-    <%= f.input :Flag10 %>
-    <%= f.input :Flag10 %>
-    <%= f.input :FreeUpgrade %>
-    <%= f.input :Gift %>
-    <%= f.input :GotEmail %>
-    <%= f.input :InvoiceNo %>
-    <%= f.input :InvTotal %>
-    <%= f.input :Kind %>
-    <%= f.input :LastName %>
-    <%= f.input :NoEmailContact %>
-    <%= f.input :NoEmailContact %>
-    <%= f.input :OldRIN %>
-    <%= f.input :OrderDate %>
-    <%= f.input :OrderTag %>
-    <%= f.input :Origin %>
-    <%= f.input :OtherAmount %>
-    <%= f.input :OtherDesc %>
-    <%= f.input :PackSlipCnt %>
-    <%= f.input :Phone %>
-    <%= f.input :RegisterTo %>
-    <%= f.input :SalesPerson %>
-    <%= f.input :SalesTax %>
-    <%= f.input :SalesTaxAdj %>
-    <%= f.input :ShipDate %>
-    <%= f.input :ShippingChg %>
-    <%= f.input :ShipType %>
-    <%= f.input :ShipVia %>
-    <%= f.input :ShopOrderNum %>
-    <%= f.input :SiteLicNum %>
-    <%= f.input :State %>
-    <%= f.input :Tagged %>
-    <%= f.input :TaxExempt %>
-    <%= f.input :TempCustNum %>
-    <%= f.input :Terms %>
-    <%= f.input :TotalSale %>
-    <%= f.input :TotalSale %>
-    <%= f.input :xDidAffil %>
-    <%= f.input :xDidPrint %>
-    <%= f.input :xDidVisa %>
-    <%= f.input :xxRecNum %>
-    <%= f.input :ZipCode %>
+<%= form_for @info, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :Address1, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Address1, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Address2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Address2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :AnyFlag, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :AnyFlag, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :AuthNo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :AuthNo, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingAddress1, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingAddress1, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingAddress2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingAddress2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingCity, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingCity, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingCompany, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingCompany, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingCountry, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingCountry, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingEmail, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingEmail, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingEmail2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingEmail2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingFirstName, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingFirstName, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingLastName, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingLastName, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingPhone, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingPhone, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingState, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingState, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :BillingZipCode, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :BillingZipCode, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CardNumber, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :CardNumber, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CashRecvd, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :CashRecvd, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CheckNumber, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :CheckNumber, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :City, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :City, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt1, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt1, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt3, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt3, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt4, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt4, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt5, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt5, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt6, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt6, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt8, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt8, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt9, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt9, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cnt10, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Cnt10, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Comment, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :Comment, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Company, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Company, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Conference, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Conference, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Country, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Country, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CustPONo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :CustPONo, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CustType, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :CustType, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Deleted, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Deleted, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :DidAffil, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :DidAffil, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :DidCCRpt, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :DidCCRpt, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :DidEmail, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :DidEmail, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :DidPrint, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :DidPrint, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :DidShort, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :DidShort, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :DidVisa, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :DidVisa, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Done, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Done, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Email, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.email_field :Email, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Email2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.email_field :Email2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ExpirDate, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ExpirDate, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :FECustNum, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :FECustNum, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :FirstName, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :FirstName, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Flag1, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Flag1, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Flag2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Flag2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Flag8, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Flag8, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Flag9, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Flag9, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Flag10, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Flag10, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Flag10, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Flag10, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :FreeUpgrade, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :FreeUpgrade, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Gift, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Gift, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :GotEmail, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :GotEmail, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :InvoiceNo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :InvoiceNo, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :InvTotal, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :InvTotal, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Kind, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :Kind, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LastName, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :LastName, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :NoEmailContact, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :NoEmailContact, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :NoEmailContact, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :NoEmailContact, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :OldRIN, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :OldRIN, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :OrderDate, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :OrderDate, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :OrderTag, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :OrderTag, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Origin, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Origin, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :OtherAmount, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :OtherAmount, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :OtherDesc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :OtherDesc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :PackSlipCnt, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :PackSlipCnt, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Phone, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Phone, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :RegisterTo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :RegisterTo, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :SalesPerson, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :SalesPerson, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :SalesTax, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :SalesTax, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :SalesTaxAdj, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :SalesTaxAdj, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ShipDate, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :ShipDate, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ShippingChg, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ShippingChg, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ShipType, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ShipType, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ShipVia, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ShipVia, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ShopOrderNum, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ShopOrderNum, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :SiteLicNum, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :SiteLicNum, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :State, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :State, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Tagged, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Tagged, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :TaxExempt, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :TaxExempt, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :TempCustNum, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :TempCustNum, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Terms, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :Terms, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :TotalSale, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :TotalSale, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :TotalSale, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :TotalSale, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :xDidAffil, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :xDidAffil, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :xDidPrint, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :xDidPrint, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :xDidVisa, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :xDidVisa, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :xxRecNum, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :xxRecNum, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ZipCode, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ZipCode, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  infos_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

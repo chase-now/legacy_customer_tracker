@@ -1,469 +1,208 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Info -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Info %></h1>
+</div>
+
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Address1) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Address1 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Address2) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Address2 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:AnyFlag) %></dt>
+      <dd><pre class="prettyprint"><%= @info.AnyFlag %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:AuthNo) %></dt>
+      <dd><pre class="prettyprint"><%= @info.AuthNo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingAddress1) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingAddress1 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingAddress2) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingAddress2 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingCity) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingCity %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingCompany) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingCompany %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingCountry) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingCountry %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingEmail) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingEmail %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingEmail2) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingEmail2 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingFirstName) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingFirstName %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingLastName) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingLastName %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingPhone) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingPhone %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingState) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingState %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:BillingZipCode) %></dt>
+      <dd><pre class="prettyprint"><%= @info.BillingZipCode %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CardNumber) %></dt>
+      <dd><pre class="prettyprint"><%= @info.CardNumber %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CashRecvd) %></dt>
+      <dd><pre class="prettyprint"><%= @info.CashRecvd %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CheckNumber) %></dt>
+      <dd><pre class="prettyprint"><%= @info.CheckNumber %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:City) %></dt>
+      <dd><pre class="prettyprint"><%= @info.City %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt2) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt2 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt1) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt1 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt3) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt3 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt4) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt4 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt5) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt5 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt6) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt6 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt8) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt8 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt9) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt9 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cnt10) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Cnt10 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Comment) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Comment %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Company) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Company %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Conference) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Conference %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Country) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Country %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CustPONo) %></dt>
+      <dd><pre class="prettyprint"><%= @info.CustPONo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CustType) %></dt>
+      <dd><pre class="prettyprint"><%= @info.CustType %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Deleted) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Deleted %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:DidAffil) %></dt>
+      <dd><pre class="prettyprint"><%= @info.DidAffil %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:DidCCRpt) %></dt>
+      <dd><pre class="prettyprint"><%= @info.DidCCRpt %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:DidEmail) %></dt>
+      <dd><pre class="prettyprint"><%= @info.DidEmail %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:DidPrint) %></dt>
+      <dd><pre class="prettyprint"><%= @info.DidPrint %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:DidShort) %></dt>
+      <dd><pre class="prettyprint"><%= @info.DidShort %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:DidVisa) %></dt>
+      <dd><pre class="prettyprint"><%= @info.DidVisa %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Done) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Done %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Email) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Email %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Email2) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Email2 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ExpirDate) %></dt>
+      <dd><pre class="prettyprint"><%= @info.ExpirDate %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:FECustNum) %></dt>
+      <dd><pre class="prettyprint"><%= @info.FECustNum %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:FirstName) %></dt>
+      <dd><pre class="prettyprint"><%= @info.FirstName %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Flag1) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Flag1 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Flag2) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Flag2 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Flag8) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Flag8 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Flag9) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Flag9 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Flag10) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Flag10 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Flag10) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Flag10 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:FreeUpgrade) %></dt>
+      <dd><pre class="prettyprint"><%= @info.FreeUpgrade %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Gift) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Gift %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:GotEmail) %></dt>
+      <dd><pre class="prettyprint"><%= @info.GotEmail %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:InvoiceNo) %></dt>
+      <dd><pre class="prettyprint"><%= @info.InvoiceNo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:InvTotal) %></dt>
+      <dd><pre class="prettyprint"><%= @info.InvTotal %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Kind) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Kind %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LastName) %></dt>
+      <dd><pre class="prettyprint"><%= @info.LastName %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:NoEmailContact) %></dt>
+      <dd><pre class="prettyprint"><%= @info.NoEmailContact %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:NoEmailContact) %></dt>
+      <dd><pre class="prettyprint"><%= @info.NoEmailContact %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:OldRIN) %></dt>
+      <dd><pre class="prettyprint"><%= @info.OldRIN %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:OrderDate) %></dt>
+      <dd><pre class="prettyprint"><%= @info.OrderDate %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:OrderTag) %></dt>
+      <dd><pre class="prettyprint"><%= @info.OrderTag %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Origin) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Origin %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:OtherAmount) %></dt>
+      <dd><pre class="prettyprint"><%= @info.OtherAmount %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:OtherDesc) %></dt>
+      <dd><pre class="prettyprint"><%= @info.OtherDesc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:PackSlipCnt) %></dt>
+      <dd><pre class="prettyprint"><%= @info.PackSlipCnt %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Phone) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Phone %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:RegisterTo) %></dt>
+      <dd><pre class="prettyprint"><%= @info.RegisterTo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:SalesPerson) %></dt>
+      <dd><pre class="prettyprint"><%= @info.SalesPerson %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:SalesTax) %></dt>
+      <dd><pre class="prettyprint"><%= @info.SalesTax %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:SalesTaxAdj) %></dt>
+      <dd><pre class="prettyprint"><%= @info.SalesTaxAdj %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ShipDate) %></dt>
+      <dd><pre class="prettyprint"><%= @info.ShipDate %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ShippingChg) %></dt>
+      <dd><pre class="prettyprint"><%= @info.ShippingChg %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ShipType) %></dt>
+      <dd><pre class="prettyprint"><%= @info.ShipType %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ShipVia) %></dt>
+      <dd><pre class="prettyprint"><%= @info.ShipVia %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ShopOrderNum) %></dt>
+      <dd><pre class="prettyprint"><%= @info.ShopOrderNum %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:SiteLicNum) %></dt>
+      <dd><pre class="prettyprint"><%= @info.SiteLicNum %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:State) %></dt>
+      <dd><pre class="prettyprint"><%= @info.State %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Tagged) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Tagged %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:TaxExempt) %></dt>
+      <dd><pre class="prettyprint"><%= @info.TaxExempt %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:TempCustNum) %></dt>
+      <dd><pre class="prettyprint"><%= @info.TempCustNum %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Terms) %></dt>
+      <dd><pre class="prettyprint"><%= @info.Terms %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:TotalSale) %></dt>
+      <dd><pre class="prettyprint"><%= @info.TotalSale %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:TotalSale) %></dt>
+      <dd><pre class="prettyprint"><%= @info.TotalSale %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:xDidAffil) %></dt>
+      <dd><pre class="prettyprint"><%= @info.xDidAffil %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:xDidPrint) %></dt>
+      <dd><pre class="prettyprint"><%= @info.xDidPrint %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:xDidVisa) %></dt>
+      <dd><pre class="prettyprint"><%= @info.xDidVisa %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:xxRecNum) %></dt>
+      <dd><pre class="prettyprint"><%= @info.xxRecNum %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ZipCode) %></dt>
+      <dd><pre class="prettyprint"><%= @info.ZipCode %></pre></dd>
+  </dl>
+</div>
+
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              infos_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_info_path(@info), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              info_path(@info),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Address1:</strong>
-  <%= @info.Address1 %>
-</p>
-
-<p>
-  <strong>Address2:</strong>
-  <%= @info.Address2 %>
-</p>
-
-<p>
-  <strong>Anyflag:</strong>
-  <%= @info.AnyFlag %>
-</p>
-
-<p>
-  <strong>Authno:</strong>
-  <%= @info.AuthNo %>
-</p>
-
-<p>
-  <strong>Billingaddress1:</strong>
-  <%= @info.BillingAddress1 %>
-</p>
-
-<p>
-  <strong>Billingaddress2:</strong>
-  <%= @info.BillingAddress2 %>
-</p>
-
-<p>
-  <strong>Billingcity:</strong>
-  <%= @info.BillingCity %>
-</p>
-
-<p>
-  <strong>Billingcompany:</strong>
-  <%= @info.BillingCompany %>
-</p>
-
-<p>
-  <strong>Billingcountry:</strong>
-  <%= @info.BillingCountry %>
-</p>
-
-<p>
-  <strong>Billingemail:</strong>
-  <%= @info.BillingEmail %>
-</p>
-
-<p>
-  <strong>Billingemail2:</strong>
-  <%= @info.BillingEmail2 %>
-</p>
-
-<p>
-  <strong>Billingfirstname:</strong>
-  <%= @info.BillingFirstName %>
-</p>
-
-<p>
-  <strong>Billinglastname:</strong>
-  <%= @info.BillingLastName %>
-</p>
-
-<p>
-  <strong>Billingphone:</strong>
-  <%= @info.BillingPhone %>
-</p>
-
-<p>
-  <strong>Billingstate:</strong>
-  <%= @info.BillingState %>
-</p>
-
-<p>
-  <strong>Billingzipcode:</strong>
-  <%= @info.BillingZipCode %>
-</p>
-
-<p>
-  <strong>Cardnumber:</strong>
-  <%= @info.CardNumber %>
-</p>
-
-<p>
-  <strong>Cashrecvd:</strong>
-  <%= @info.CashRecvd %>
-</p>
-
-<p>
-  <strong>Checknumber:</strong>
-  <%= @info.CheckNumber %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @info.City %>
-</p>
-
-<p>
-  <strong>Cnt2:</strong>
-  <%= @info.Cnt2 %>
-</p>
-
-<p>
-  <strong>Cnt1:</strong>
-  <%= @info.Cnt1 %>
-</p>
-
-<p>
-  <strong>Cnt3:</strong>
-  <%= @info.Cnt3 %>
-</p>
-
-<p>
-  <strong>Cnt4:</strong>
-  <%= @info.Cnt4 %>
-</p>
-
-<p>
-  <strong>Cnt5:</strong>
-  <%= @info.Cnt5 %>
-</p>
-
-<p>
-  <strong>Cnt6:</strong>
-  <%= @info.Cnt6 %>
-</p>
-
-<p>
-  <strong>Cnt8:</strong>
-  <%= @info.Cnt8 %>
-</p>
-
-<p>
-  <strong>Cnt9:</strong>
-  <%= @info.Cnt9 %>
-</p>
-
-<p>
-  <strong>Cnt10:</strong>
-  <%= @info.Cnt10 %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @info.Comment %>
-</p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @info.Company %>
-</p>
-
-<p>
-  <strong>Conference:</strong>
-  <%= @info.Conference %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @info.Country %>
-</p>
-
-<p>
-  <strong>Custpono:</strong>
-  <%= @info.CustPONo %>
-</p>
-
-<p>
-  <strong>Custtype:</strong>
-  <%= @info.CustType %>
-</p>
-
-<p>
-  <strong>Deleted:</strong>
-  <%= @info.Deleted %>
-</p>
-
-<p>
-  <strong>Didaffil:</strong>
-  <%= @info.DidAffil %>
-</p>
-
-<p>
-  <strong>Didccrpt:</strong>
-  <%= @info.DidCCRpt %>
-</p>
-
-<p>
-  <strong>Didemail:</strong>
-  <%= @info.DidEmail %>
-</p>
-
-<p>
-  <strong>Didprint:</strong>
-  <%= @info.DidPrint %>
-</p>
-
-<p>
-  <strong>Didshort:</strong>
-  <%= @info.DidShort %>
-</p>
-
-<p>
-  <strong>Didvisa:</strong>
-  <%= @info.DidVisa %>
-</p>
-
-<p>
-  <strong>Done:</strong>
-  <%= @info.Done %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @info.Email %>
-</p>
-
-<p>
-  <strong>Email2:</strong>
-  <%= @info.Email2 %>
-</p>
-
-<p>
-  <strong>Expirdate:</strong>
-  <%= @info.ExpirDate %>
-</p>
-
-<p>
-  <strong>Fecustnum:</strong>
-  <%= @info.FECustNum %>
-</p>
-
-<p>
-  <strong>Firstname:</strong>
-  <%= @info.FirstName %>
-</p>
-
-<p>
-  <strong>Flag1:</strong>
-  <%= @info.Flag1 %>
-</p>
-
-<p>
-  <strong>Flag2:</strong>
-  <%= @info.Flag2 %>
-</p>
-
-<p>
-  <strong>Flag8:</strong>
-  <%= @info.Flag8 %>
-</p>
-
-<p>
-  <strong>Flag9:</strong>
-  <%= @info.Flag9 %>
-</p>
-
-<p>
-  <strong>Flag10:</strong>
-  <%= @info.Flag10 %>
-</p>
-
-<p>
-  <strong>Flag10:</strong>
-  <%= @info.Flag10 %>
-</p>
-
-<p>
-  <strong>Freeupgrade:</strong>
-  <%= @info.FreeUpgrade %>
-</p>
-
-<p>
-  <strong>Gift:</strong>
-  <%= @info.Gift %>
-</p>
-
-<p>
-  <strong>Gotemail:</strong>
-  <%= @info.GotEmail %>
-</p>
-
-<p>
-  <strong>Invoiceno:</strong>
-  <%= @info.InvoiceNo %>
-</p>
-
-<p>
-  <strong>Invtotal:</strong>
-  <%= @info.InvTotal %>
-</p>
-
-<p>
-  <strong>Kind:</strong>
-  <%= @info.Kind %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @info.LastName %>
-</p>
-
-<p>
-  <strong>Noemailcontact:</strong>
-  <%= @info.NoEmailContact %>
-</p>
-
-<p>
-  <strong>Noemailcontact:</strong>
-  <%= @info.NoEmailContact %>
-</p>
-
-<p>
-  <strong>Oldrin:</strong>
-  <%= @info.OldRIN %>
-</p>
-
-<p>
-  <strong>Orderdate:</strong>
-  <%= @info.OrderDate %>
-</p>
-
-<p>
-  <strong>Ordertag:</strong>
-  <%= @info.OrderTag %>
-</p>
-
-<p>
-  <strong>Origin:</strong>
-  <%= @info.Origin %>
-</p>
-
-<p>
-  <strong>Otheramount:</strong>
-  <%= @info.OtherAmount %>
-</p>
-
-<p>
-  <strong>Otherdesc:</strong>
-  <%= @info.OtherDesc %>
-</p>
-
-<p>
-  <strong>Packslipcnt:</strong>
-  <%= @info.PackSlipCnt %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @info.Phone %>
-</p>
-
-<p>
-  <strong>Registerto:</strong>
-  <%= @info.RegisterTo %>
-</p>
-
-<p>
-  <strong>Salesperson:</strong>
-  <%= @info.SalesPerson %>
-</p>
-
-<p>
-  <strong>Salestax:</strong>
-  <%= @info.SalesTax %>
-</p>
-
-<p>
-  <strong>Salestaxadj:</strong>
-  <%= @info.SalesTaxAdj %>
-</p>
-
-<p>
-  <strong>Shipdate:</strong>
-  <%= @info.ShipDate %>
-</p>
-
-<p>
-  <strong>Shippingchg:</strong>
-  <%= @info.ShippingChg %>
-</p>
-
-<p>
-  <strong>Shiptype:</strong>
-  <%= @info.ShipType %>
-</p>
-
-<p>
-  <strong>Shipvia:</strong>
-  <%= @info.ShipVia %>
-</p>
-
-<p>
-  <strong>Shopordernum:</strong>
-  <%= @info.ShopOrderNum %>
-</p>
-
-<p>
-  <strong>Sitelicnum:</strong>
-  <%= @info.SiteLicNum %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @info.State %>
-</p>
-
-<p>
-  <strong>Tagged:</strong>
-  <%= @info.Tagged %>
-</p>
-
-<p>
-  <strong>Taxexempt:</strong>
-  <%= @info.TaxExempt %>
-</p>
-
-<p>
-  <strong>Tempcustnum:</strong>
-  <%= @info.TempCustNum %>
-</p>
-
-<p>
-  <strong>Terms:</strong>
-  <%= @info.Terms %>
-</p>
-
-<p>
-  <strong>Totalsale:</strong>
-  <%= @info.TotalSale %>
-</p>
-
-<p>
-  <strong>Totalsale:</strong>
-  <%= @info.TotalSale %>
-</p>
-
-<p>
-  <strong>Xdidaffil:</strong>
-  <%= @info.xDidAffil %>
-</p>
-
-<p>
-  <strong>Xdidprint:</strong>
-  <%= @info.xDidPrint %>
-</p>
-
-<p>
-  <strong>Xdidvisa:</strong>
-  <%= @info.xDidVisa %>
-</p>
-
-<p>
-  <strong>Xxrecnum:</strong>
-  <%= @info.xxRecNum %>
-</p>
-
-<p>
-  <strong>Zipcode:</strong>
-  <%= @info.ZipCode %>
-</p>
-
-<%= link_to 'Edit', edit_info_path(@info) %> |
-<%= link_to 'Back', infos_path %>

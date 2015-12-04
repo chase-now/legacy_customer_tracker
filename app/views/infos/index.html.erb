@@ -1,108 +1,112 @@
-<h1>Listing infos</h1>
-
-<table>
+<%- model_class = Info -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Info %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Address1</th>
-      <th>Address2</th>
-      <th>Anyflag</th>
-      <th>Authno</th>
-      <th>Billingaddress1</th>
-      <th>Billingaddress2</th>
-      <th>Billingcity</th>
-      <th>Billingcompany</th>
-      <th>Billingcountry</th>
-      <th>Billingemail</th>
-      <th>Billingemail2</th>
-      <th>Billingfirstname</th>
-      <th>Billinglastname</th>
-      <th>Billingphone</th>
-      <th>Billingstate</th>
-      <th>Billingzipcode</th>
-      <th>Cardnumber</th>
-      <th>Cashrecvd</th>
-      <th>Checknumber</th>
-      <th>City</th>
-      <th>Cnt2</th>
-      <th>Cnt1</th>
-      <th>Cnt3</th>
-      <th>Cnt4</th>
-      <th>Cnt5</th>
-      <th>Cnt6</th>
-      <th>Cnt8</th>
-      <th>Cnt9</th>
-      <th>Cnt10</th>
-      <th>Comment</th>
-      <th>Company</th>
-      <th>Conference</th>
-      <th>Country</th>
-      <th>Custpono</th>
-      <th>Custtype</th>
-      <th>Deleted</th>
-      <th>Didaffil</th>
-      <th>Didccrpt</th>
-      <th>Didemail</th>
-      <th>Didprint</th>
-      <th>Didshort</th>
-      <th>Didvisa</th>
-      <th>Done</th>
-      <th>Email</th>
-      <th>Email2</th>
-      <th>Expirdate</th>
-      <th>Fecustnum</th>
-      <th>Firstname</th>
-      <th>Flag1</th>
-      <th>Flag2</th>
-      <th>Flag8</th>
-      <th>Flag9</th>
-      <th>Flag10</th>
-      <th>Flag10</th>
-      <th>Freeupgrade</th>
-      <th>Gift</th>
-      <th>Gotemail</th>
-      <th>Invoiceno</th>
-      <th>Invtotal</th>
-      <th>Kind</th>
-      <th>Lastname</th>
-      <th>Noemailcontact</th>
-      <th>Noemailcontact</th>
-      <th>Oldrin</th>
-      <th>Orderdate</th>
-      <th>Ordertag</th>
-      <th>Origin</th>
-      <th>Otheramount</th>
-      <th>Otherdesc</th>
-      <th>Packslipcnt</th>
-      <th>Phone</th>
-      <th>Registerto</th>
-      <th>Salesperson</th>
-      <th>Salestax</th>
-      <th>Salestaxadj</th>
-      <th>Shipdate</th>
-      <th>Shippingchg</th>
-      <th>Shiptype</th>
-      <th>Shipvia</th>
-      <th>Shopordernum</th>
-      <th>Sitelicnum</th>
-      <th>State</th>
-      <th>Tagged</th>
-      <th>Taxexempt</th>
-      <th>Tempcustnum</th>
-      <th>Terms</th>
-      <th>Totalsale</th>
-      <th>Totalsale</th>
-      <th>Xdidaffil</th>
-      <th>Xdidprint</th>
-      <th>Xdidvisa</th>
-      <th>Xxrecnum</th>
-      <th>Zipcode</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:Address1) %></th>
+      <th><%= model_class.human_attribute_name(:Address2) %></th>
+      <th><%= model_class.human_attribute_name(:AnyFlag) %></th>
+      <th><%= model_class.human_attribute_name(:AuthNo) %></th>
+      <th><%= model_class.human_attribute_name(:BillingAddress1) %></th>
+      <th><%= model_class.human_attribute_name(:BillingAddress2) %></th>
+      <th><%= model_class.human_attribute_name(:BillingCity) %></th>
+      <th><%= model_class.human_attribute_name(:BillingCompany) %></th>
+      <th><%= model_class.human_attribute_name(:BillingCountry) %></th>
+      <th><%= model_class.human_attribute_name(:BillingEmail) %></th>
+      <th><%= model_class.human_attribute_name(:BillingEmail2) %></th>
+      <th><%= model_class.human_attribute_name(:BillingFirstName) %></th>
+      <th><%= model_class.human_attribute_name(:BillingLastName) %></th>
+      <th><%= model_class.human_attribute_name(:BillingPhone) %></th>
+      <th><%= model_class.human_attribute_name(:BillingState) %></th>
+      <th><%= model_class.human_attribute_name(:BillingZipCode) %></th>
+      <th><%= model_class.human_attribute_name(:CardNumber) %></th>
+      <th><%= model_class.human_attribute_name(:CashRecvd) %></th>
+      <th><%= model_class.human_attribute_name(:CheckNumber) %></th>
+      <th><%= model_class.human_attribute_name(:City) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt2) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt1) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt3) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt4) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt5) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt6) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt8) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt9) %></th>
+      <th><%= model_class.human_attribute_name(:Cnt10) %></th>
+      <th><%= model_class.human_attribute_name(:Comment) %></th>
+      <th><%= model_class.human_attribute_name(:Company) %></th>
+      <th><%= model_class.human_attribute_name(:Conference) %></th>
+      <th><%= model_class.human_attribute_name(:Country) %></th>
+      <th><%= model_class.human_attribute_name(:CustPONo) %></th>
+      <th><%= model_class.human_attribute_name(:CustType) %></th>
+      <th><%= model_class.human_attribute_name(:Deleted) %></th>
+      <th><%= model_class.human_attribute_name(:DidAffil) %></th>
+      <th><%= model_class.human_attribute_name(:DidCCRpt) %></th>
+      <th><%= model_class.human_attribute_name(:DidEmail) %></th>
+      <th><%= model_class.human_attribute_name(:DidPrint) %></th>
+      <th><%= model_class.human_attribute_name(:DidShort) %></th>
+      <th><%= model_class.human_attribute_name(:DidVisa) %></th>
+      <th><%= model_class.human_attribute_name(:Done) %></th>
+      <th><%= model_class.human_attribute_name(:Email) %></th>
+      <th><%= model_class.human_attribute_name(:Email2) %></th>
+      <th><%= model_class.human_attribute_name(:ExpirDate) %></th>
+      <th><%= model_class.human_attribute_name(:FECustNum) %></th>
+      <th><%= model_class.human_attribute_name(:FirstName) %></th>
+      <th><%= model_class.human_attribute_name(:Flag1) %></th>
+      <th><%= model_class.human_attribute_name(:Flag2) %></th>
+      <th><%= model_class.human_attribute_name(:Flag8) %></th>
+      <th><%= model_class.human_attribute_name(:Flag9) %></th>
+      <th><%= model_class.human_attribute_name(:Flag10) %></th>
+      <th><%= model_class.human_attribute_name(:Flag10) %></th>
+      <th><%= model_class.human_attribute_name(:FreeUpgrade) %></th>
+      <th><%= model_class.human_attribute_name(:Gift) %></th>
+      <th><%= model_class.human_attribute_name(:GotEmail) %></th>
+      <th><%= model_class.human_attribute_name(:InvoiceNo) %></th>
+      <th><%= model_class.human_attribute_name(:InvTotal) %></th>
+      <th><%= model_class.human_attribute_name(:Kind) %></th>
+      <th><%= model_class.human_attribute_name(:LastName) %></th>
+      <th><%= model_class.human_attribute_name(:NoEmailContact) %></th>
+      <th><%= model_class.human_attribute_name(:NoEmailContact) %></th>
+      <th><%= model_class.human_attribute_name(:OldRIN) %></th>
+      <th><%= model_class.human_attribute_name(:OrderDate) %></th>
+      <th><%= model_class.human_attribute_name(:OrderTag) %></th>
+      <th><%= model_class.human_attribute_name(:Origin) %></th>
+      <th><%= model_class.human_attribute_name(:OtherAmount) %></th>
+      <th><%= model_class.human_attribute_name(:OtherDesc) %></th>
+      <th><%= model_class.human_attribute_name(:PackSlipCnt) %></th>
+      <th><%= model_class.human_attribute_name(:Phone) %></th>
+      <th><%= model_class.human_attribute_name(:RegisterTo) %></th>
+      <th><%= model_class.human_attribute_name(:SalesPerson) %></th>
+      <th><%= model_class.human_attribute_name(:SalesTax) %></th>
+      <th><%= model_class.human_attribute_name(:SalesTaxAdj) %></th>
+      <th><%= model_class.human_attribute_name(:ShipDate) %></th>
+      <th><%= model_class.human_attribute_name(:ShippingChg) %></th>
+      <th><%= model_class.human_attribute_name(:ShipType) %></th>
+      <th><%= model_class.human_attribute_name(:ShipVia) %></th>
+      <th><%= model_class.human_attribute_name(:ShopOrderNum) %></th>
+      <th><%= model_class.human_attribute_name(:SiteLicNum) %></th>
+      <th><%= model_class.human_attribute_name(:State) %></th>
+      <th><%= model_class.human_attribute_name(:Tagged) %></th>
+      <th><%= model_class.human_attribute_name(:TaxExempt) %></th>
+      <th><%= model_class.human_attribute_name(:TempCustNum) %></th>
+      <th><%= model_class.human_attribute_name(:Terms) %></th>
+      <th><%= model_class.human_attribute_name(:TotalSale) %></th>
+      <th><%= model_class.human_attribute_name(:TotalSale) %></th>
+      <th><%= model_class.human_attribute_name(:xDidAffil) %></th>
+      <th><%= model_class.human_attribute_name(:xDidPrint) %></th>
+      <th><%= model_class.human_attribute_name(:xDidVisa) %></th>
+      <th><%= model_class.human_attribute_name(:xxRecNum) %></th>
+      <th><%= model_class.human_attribute_name(:ZipCode) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @infos.each do |info| %>
       <tr>
+        <td><%= info.id %></td>
         <td><%= info.Address1 %></td>
         <td><%= info.Address2 %></td>
         <td><%= info.AnyFlag %></td>
@@ -196,14 +200,21 @@
         <td><%= info.xDidVisa %></td>
         <td><%= info.xxRecNum %></td>
         <td><%= info.ZipCode %></td>
-        <td><%= link_to 'Show', info %></td>
-        <td><%= link_to 'Edit', edit_info_path(info) %></td>
-        <td><%= link_to 'Destroy', info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l info.created_at, format: :long %></td>
+        <td>
+          <%= link_to info_path(info), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to info_path(info), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Info', new_info_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_info_path,
+            :class => 'btn btn-primary' %>
