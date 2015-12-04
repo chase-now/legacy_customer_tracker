@@ -1,0 +1,16 @@
+<%= simple_form_for(@item) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :Code %>
+    <%= f.input :Desc %>
+    <%= f.association :info %>
+    <%= f.input :Price %>
+    <%= f.input :Qty %>
+    <%= f.input :UnlockCode %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

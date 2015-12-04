@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @item.Code %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @item.Desc %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @item.info %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @item.Price %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @item.Qty %>
+</p>
+
+<p>
+  <strong>Unlockcode:</strong>
+  <%= @item.UnlockCode %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
