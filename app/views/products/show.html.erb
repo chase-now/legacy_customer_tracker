@@ -1,189 +1,96 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Product -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Product %></h1>
+</div>
 
-<p>
-  <strong>Altproductcode:</strong>
-  <%= @product.AltProductCode %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:AltProductCode) %></dt>
+      <dd><pre class="prettyprint"><%= @product.AltProductCode %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:AltProductDesc) %></dt>
+      <dd><pre class="prettyprint"><%= @product.AltProductDesc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:AltSearchCode) %></dt>
+      <dd><pre class="prettyprint"><%= @product.AltSearchCode %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Author) %></dt>
+      <dd><pre class="prettyprint"><%= @product.Author %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CatAddon) %></dt>
+      <dd><pre class="prettyprint"><%= @product.CatAddon %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CatBook) %></dt>
+      <dd><pre class="prettyprint"><%= @product.CatBook %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CatOther) %></dt>
+      <dd><pre class="prettyprint"><%= @product.CatOther %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CatQuickGuide) %></dt>
+      <dd><pre class="prettyprint"><%= @product.CatQuickGuide %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CatWebinarCD) %></dt>
+      <dd><pre class="prettyprint"><%= @product.CatWebinarCD %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:CatWebinarSubsc) %></dt>
+      <dd><pre class="prettyprint"><%= @product.CatWebinarSubsc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Cost) %></dt>
+      <dd><pre class="prettyprint"><%= @product.Cost %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Current) %></dt>
+      <dd><pre class="prettyprint"><%= @product.Current %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:DateAdded) %></dt>
+      <dd><pre class="prettyprint"><%= @product.DateAdded %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:DownloadOnly) %></dt>
+      <dd><pre class="prettyprint"><%= @product.DownloadOnly %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:InventoryID) %></dt>
+      <dd><pre class="prettyprint"><%= @product.InventoryID %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:InventoryItem) %></dt>
+      <dd><pre class="prettyprint"><%= @product.InventoryItem %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegacyProduct) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegacyProduct %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegCD) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegCD %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegInternational) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegInternational %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegJustMan) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegJustMan %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegJustManDL) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegJustManDL %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegManual) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegManual %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegNewCode) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegNewCode %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegPDFEmail) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegPDFEmail %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegUpgradeCode) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegUpgradeCode %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegVol1Training) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegVol1Training %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LegVol2Training) %></dt>
+      <dd><pre class="prettyprint"><%= @product.LegVol2Training %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:MultiPack) %></dt>
+      <dd><pre class="prettyprint"><%= @product.MultiPack %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Price) %></dt>
+      <dd><pre class="prettyprint"><%= @product.Price %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:PrintsInvoice) %></dt>
+      <dd><pre class="prettyprint"><%= @product.PrintsInvoice %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ProductCode) %></dt>
+      <dd><pre class="prettyprint"><%= @product.ProductCode %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ProductDesc) %></dt>
+      <dd><pre class="prettyprint"><%= @product.ProductDesc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ProductParts) %></dt>
+      <dd><pre class="prettyprint"><%= @product.ProductParts %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:SearchCode) %></dt>
+      <dd><pre class="prettyprint"><%= @product.SearchCode %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:SendAnEmail) %></dt>
+      <dd><pre class="prettyprint"><%= @product.SendAnEmail %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Tag) %></dt>
+      <dd><pre class="prettyprint"><%= @product.Tag %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:UnlockRequired) %></dt>
+      <dd><pre class="prettyprint"><%= @product.UnlockRequired %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Altproductdesc:</strong>
-  <%= @product.AltProductDesc %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              products_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_product_path(@product), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              product_path(@product),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Altsearchcode:</strong>
-  <%= @product.AltSearchCode %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @product.Author %>
-</p>
-
-<p>
-  <strong>Cataddon:</strong>
-  <%= @product.CatAddon %>
-</p>
-
-<p>
-  <strong>Catbook:</strong>
-  <%= @product.CatBook %>
-</p>
-
-<p>
-  <strong>Catother:</strong>
-  <%= @product.CatOther %>
-</p>
-
-<p>
-  <strong>Catquickguide:</strong>
-  <%= @product.CatQuickGuide %>
-</p>
-
-<p>
-  <strong>Catwebinarcd:</strong>
-  <%= @product.CatWebinarCD %>
-</p>
-
-<p>
-  <strong>Catwebinarsubsc:</strong>
-  <%= @product.CatWebinarSubsc %>
-</p>
-
-<p>
-  <strong>Cost:</strong>
-  <%= @product.Cost %>
-</p>
-
-<p>
-  <strong>Current:</strong>
-  <%= @product.Current %>
-</p>
-
-<p>
-  <strong>Dateadded:</strong>
-  <%= @product.DateAdded %>
-</p>
-
-<p>
-  <strong>Downloadonly:</strong>
-  <%= @product.DownloadOnly %>
-</p>
-
-<p>
-  <strong>Inventoryid:</strong>
-  <%= @product.InventoryID %>
-</p>
-
-<p>
-  <strong>Inventoryitem:</strong>
-  <%= @product.InventoryItem %>
-</p>
-
-<p>
-  <strong>Legacyproduct:</strong>
-  <%= @product.LegacyProduct %>
-</p>
-
-<p>
-  <strong>Legcd:</strong>
-  <%= @product.LegCD %>
-</p>
-
-<p>
-  <strong>Leginternational:</strong>
-  <%= @product.LegInternational %>
-</p>
-
-<p>
-  <strong>Legjustman:</strong>
-  <%= @product.LegJustMan %>
-</p>
-
-<p>
-  <strong>Legjustmandl:</strong>
-  <%= @product.LegJustManDL %>
-</p>
-
-<p>
-  <strong>Legmanual:</strong>
-  <%= @product.LegManual %>
-</p>
-
-<p>
-  <strong>Legnewcode:</strong>
-  <%= @product.LegNewCode %>
-</p>
-
-<p>
-  <strong>Legpdfemail:</strong>
-  <%= @product.LegPDFEmail %>
-</p>
-
-<p>
-  <strong>Legupgradecode:</strong>
-  <%= @product.LegUpgradeCode %>
-</p>
-
-<p>
-  <strong>Legvol1training:</strong>
-  <%= @product.LegVol1Training %>
-</p>
-
-<p>
-  <strong>Legvol2training:</strong>
-  <%= @product.LegVol2Training %>
-</p>
-
-<p>
-  <strong>Multipack:</strong>
-  <%= @product.MultiPack %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.Price %>
-</p>
-
-<p>
-  <strong>Printsinvoice:</strong>
-  <%= @product.PrintsInvoice %>
-</p>
-
-<p>
-  <strong>Productcode:</strong>
-  <%= @product.ProductCode %>
-</p>
-
-<p>
-  <strong>Productdesc:</strong>
-  <%= @product.ProductDesc %>
-</p>
-
-<p>
-  <strong>Productparts:</strong>
-  <%= @product.ProductParts %>
-</p>
-
-<p>
-  <strong>Searchcode:</strong>
-  <%= @product.SearchCode %>
-</p>
-
-<p>
-  <strong>Sendanemail:</strong>
-  <%= @product.SendAnEmail %>
-</p>
-
-<p>
-  <strong>Tag:</strong>
-  <%= @product.Tag %>
-</p>
-
-<p>
-  <strong>Unlockrequired:</strong>
-  <%= @product.UnlockRequired %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>

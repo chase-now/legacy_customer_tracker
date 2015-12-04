@@ -1,47 +1,232 @@
-<%= simple_form_for(@product) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :AltProductCode %>
-    <%= f.input :AltProductDesc %>
-    <%= f.input :AltSearchCode %>
-    <%= f.input :Author %>
-    <%= f.input :CatAddon %>
-    <%= f.input :CatBook %>
-    <%= f.input :CatOther %>
-    <%= f.input :CatQuickGuide %>
-    <%= f.input :CatWebinarCD %>
-    <%= f.input :CatWebinarSubsc %>
-    <%= f.input :Cost %>
-    <%= f.input :Current %>
-    <%= f.input :DateAdded %>
-    <%= f.input :DownloadOnly %>
-    <%= f.input :InventoryID %>
-    <%= f.input :InventoryItem %>
-    <%= f.input :LegacyProduct %>
-    <%= f.input :LegCD %>
-    <%= f.input :LegInternational %>
-    <%= f.input :LegJustMan %>
-    <%= f.input :LegJustManDL %>
-    <%= f.input :LegManual %>
-    <%= f.input :LegNewCode %>
-    <%= f.input :LegPDFEmail %>
-    <%= f.input :LegUpgradeCode %>
-    <%= f.input :LegVol1Training %>
-    <%= f.input :LegVol2Training %>
-    <%= f.input :MultiPack %>
-    <%= f.input :Price %>
-    <%= f.input :PrintsInvoice %>
-    <%= f.input :ProductCode %>
-    <%= f.input :ProductDesc %>
-    <%= f.input :ProductParts %>
-    <%= f.input :SearchCode %>
-    <%= f.input :SendAnEmail %>
-    <%= f.input :Tag %>
-    <%= f.input :UnlockRequired %>
+<%= form_for @product, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :AltProductCode, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :AltProductCode, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :AltProductDesc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :AltProductDesc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :AltSearchCode, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :AltSearchCode, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Author, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Author, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CatAddon, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :CatAddon, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CatBook, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :CatBook, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CatOther, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :CatOther, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CatQuickGuide, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :CatQuickGuide, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CatWebinarCD, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :CatWebinarCD, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :CatWebinarSubsc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :CatWebinarSubsc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Cost, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Cost, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Current, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Current, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :DateAdded, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :DateAdded, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :DownloadOnly, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :DownloadOnly, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :InventoryID, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :InventoryID, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :InventoryItem, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :InventoryItem, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegacyProduct, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :LegacyProduct, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegCD, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegCD, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegInternational, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegInternational, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegJustMan, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegJustMan, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegJustManDL, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegJustManDL, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegManual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegManual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegNewCode, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegNewCode, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegPDFEmail, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegPDFEmail, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegUpgradeCode, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegUpgradeCode, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegVol1Training, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegVol1Training, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :LegVol2Training, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :LegVol2Training, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :MultiPack, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :MultiPack, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Price, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Price, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :PrintsInvoice, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :PrintsInvoice, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ProductCode, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ProductCode, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ProductDesc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ProductDesc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ProductParts, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :ProductParts, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :SearchCode, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :SearchCode, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :SendAnEmail, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :SendAnEmail, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Tag, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :Tag, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :UnlockRequired, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :UnlockRequired, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  products_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

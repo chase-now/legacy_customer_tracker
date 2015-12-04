@@ -1,52 +1,56 @@
-<h1>Listing products</h1>
-
-<table>
+<%- model_class = Product -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Product %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Altproductcode</th>
-      <th>Altproductdesc</th>
-      <th>Altsearchcode</th>
-      <th>Author</th>
-      <th>Cataddon</th>
-      <th>Catbook</th>
-      <th>Catother</th>
-      <th>Catquickguide</th>
-      <th>Catwebinarcd</th>
-      <th>Catwebinarsubsc</th>
-      <th>Cost</th>
-      <th>Current</th>
-      <th>Dateadded</th>
-      <th>Downloadonly</th>
-      <th>Inventoryid</th>
-      <th>Inventoryitem</th>
-      <th>Legacyproduct</th>
-      <th>Legcd</th>
-      <th>Leginternational</th>
-      <th>Legjustman</th>
-      <th>Legjustmandl</th>
-      <th>Legmanual</th>
-      <th>Legnewcode</th>
-      <th>Legpdfemail</th>
-      <th>Legupgradecode</th>
-      <th>Legvol1training</th>
-      <th>Legvol2training</th>
-      <th>Multipack</th>
-      <th>Price</th>
-      <th>Printsinvoice</th>
-      <th>Productcode</th>
-      <th>Productdesc</th>
-      <th>Productparts</th>
-      <th>Searchcode</th>
-      <th>Sendanemail</th>
-      <th>Tag</th>
-      <th>Unlockrequired</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:AltProductCode) %></th>
+      <th><%= model_class.human_attribute_name(:AltProductDesc) %></th>
+      <th><%= model_class.human_attribute_name(:AltSearchCode) %></th>
+      <th><%= model_class.human_attribute_name(:Author) %></th>
+      <th><%= model_class.human_attribute_name(:CatAddon) %></th>
+      <th><%= model_class.human_attribute_name(:CatBook) %></th>
+      <th><%= model_class.human_attribute_name(:CatOther) %></th>
+      <th><%= model_class.human_attribute_name(:CatQuickGuide) %></th>
+      <th><%= model_class.human_attribute_name(:CatWebinarCD) %></th>
+      <th><%= model_class.human_attribute_name(:CatWebinarSubsc) %></th>
+      <th><%= model_class.human_attribute_name(:Cost) %></th>
+      <th><%= model_class.human_attribute_name(:Current) %></th>
+      <th><%= model_class.human_attribute_name(:DateAdded) %></th>
+      <th><%= model_class.human_attribute_name(:DownloadOnly) %></th>
+      <th><%= model_class.human_attribute_name(:InventoryID) %></th>
+      <th><%= model_class.human_attribute_name(:InventoryItem) %></th>
+      <th><%= model_class.human_attribute_name(:LegacyProduct) %></th>
+      <th><%= model_class.human_attribute_name(:LegCD) %></th>
+      <th><%= model_class.human_attribute_name(:LegInternational) %></th>
+      <th><%= model_class.human_attribute_name(:LegJustMan) %></th>
+      <th><%= model_class.human_attribute_name(:LegJustManDL) %></th>
+      <th><%= model_class.human_attribute_name(:LegManual) %></th>
+      <th><%= model_class.human_attribute_name(:LegNewCode) %></th>
+      <th><%= model_class.human_attribute_name(:LegPDFEmail) %></th>
+      <th><%= model_class.human_attribute_name(:LegUpgradeCode) %></th>
+      <th><%= model_class.human_attribute_name(:LegVol1Training) %></th>
+      <th><%= model_class.human_attribute_name(:LegVol2Training) %></th>
+      <th><%= model_class.human_attribute_name(:MultiPack) %></th>
+      <th><%= model_class.human_attribute_name(:Price) %></th>
+      <th><%= model_class.human_attribute_name(:PrintsInvoice) %></th>
+      <th><%= model_class.human_attribute_name(:ProductCode) %></th>
+      <th><%= model_class.human_attribute_name(:ProductDesc) %></th>
+      <th><%= model_class.human_attribute_name(:ProductParts) %></th>
+      <th><%= model_class.human_attribute_name(:SearchCode) %></th>
+      <th><%= model_class.human_attribute_name(:SendAnEmail) %></th>
+      <th><%= model_class.human_attribute_name(:Tag) %></th>
+      <th><%= model_class.human_attribute_name(:UnlockRequired) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td><%= product.id %></td>
         <td><%= product.AltProductCode %></td>
         <td><%= product.AltProductDesc %></td>
         <td><%= product.AltSearchCode %></td>
@@ -84,14 +88,21 @@
         <td><%= product.SendAnEmail %></td>
         <td><%= product.Tag %></td>
         <td><%= product.UnlockRequired %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l product.created_at, format: :long %></td>
+        <td>
+          <%= link_to product_path(product), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to product_path(product), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_product_path,
+            :class => 'btn btn-primary' %>
