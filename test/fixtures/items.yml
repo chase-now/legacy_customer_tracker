@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Code: MyString
+  Desc: MyString
+  info_id: 
+  Price: 9.99
+  Qty: 1
+  UnlockCode: MyString
+
+two:
+  Code: MyString
+  Desc: MyString
+  info_id: 
+  Price: 9.99
+  Qty: 1
+  UnlockCode: MyString
