@@ -1,0 +1,97 @@
+<h1>Listing products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Altproductcode</th>
+      <th>Altproductdesc</th>
+      <th>Altsearchcode</th>
+      <th>Author</th>
+      <th>Cataddon</th>
+      <th>Catbook</th>
+      <th>Catother</th>
+      <th>Catquickguide</th>
+      <th>Catwebinarcd</th>
+      <th>Catwebinarsubsc</th>
+      <th>Cost</th>
+      <th>Current</th>
+      <th>Dateadded</th>
+      <th>Downloadonly</th>
+      <th>Inventoryid</th>
+      <th>Inventoryitem</th>
+      <th>Legacyproduct</th>
+      <th>Legcd</th>
+      <th>Leginternational</th>
+      <th>Legjustman</th>
+      <th>Legjustmandl</th>
+      <th>Legmanual</th>
+      <th>Legnewcode</th>
+      <th>Legpdfemail</th>
+      <th>Legupgradecode</th>
+      <th>Legvol1training</th>
+      <th>Legvol2training</th>
+      <th>Multipack</th>
+      <th>Price</th>
+      <th>Printsinvoice</th>
+      <th>Productcode</th>
+      <th>Productdesc</th>
+      <th>Productparts</th>
+      <th>Searchcode</th>
+      <th>Sendanemail</th>
+      <th>Tag</th>
+      <th>Unlockrequired</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.AltProductCode %></td>
+        <td><%= product.AltProductDesc %></td>
+        <td><%= product.AltSearchCode %></td>
+        <td><%= product.Author %></td>
+        <td><%= product.CatAddon %></td>
+        <td><%= product.CatBook %></td>
+        <td><%= product.CatOther %></td>
+        <td><%= product.CatQuickGuide %></td>
+        <td><%= product.CatWebinarCD %></td>
+        <td><%= product.CatWebinarSubsc %></td>
+        <td><%= product.Cost %></td>
+        <td><%= product.Current %></td>
+        <td><%= product.DateAdded %></td>
+        <td><%= product.DownloadOnly %></td>
+        <td><%= product.InventoryID %></td>
+        <td><%= product.InventoryItem %></td>
+        <td><%= product.LegacyProduct %></td>
+        <td><%= product.LegCD %></td>
+        <td><%= product.LegInternational %></td>
+        <td><%= product.LegJustMan %></td>
+        <td><%= product.LegJustManDL %></td>
+        <td><%= product.LegManual %></td>
+        <td><%= product.LegNewCode %></td>
+        <td><%= product.LegPDFEmail %></td>
+        <td><%= product.LegUpgradeCode %></td>
+        <td><%= product.LegVol1Training %></td>
+        <td><%= product.LegVol2Training %></td>
+        <td><%= product.MultiPack %></td>
+        <td><%= product.Price %></td>
+        <td><%= product.PrintsInvoice %></td>
+        <td><%= product.ProductCode %></td>
+        <td><%= product.ProductDesc %></td>
+        <td><%= product.ProductParts %></td>
+        <td><%= product.SearchCode %></td>
+        <td><%= product.SendAnEmail %></td>
+        <td><%= product.Tag %></td>
+        <td><%= product.UnlockRequired %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>

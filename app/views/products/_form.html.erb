@@ -1,0 +1,47 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :AltProductCode %>
+    <%= f.input :AltProductDesc %>
+    <%= f.input :AltSearchCode %>
+    <%= f.input :Author %>
+    <%= f.input :CatAddon %>
+    <%= f.input :CatBook %>
+    <%= f.input :CatOther %>
+    <%= f.input :CatQuickGuide %>
+    <%= f.input :CatWebinarCD %>
+    <%= f.input :CatWebinarSubsc %>
+    <%= f.input :Cost %>
+    <%= f.input :Current %>
+    <%= f.input :DateAdded %>
+    <%= f.input :DownloadOnly %>
+    <%= f.input :InventoryID %>
+    <%= f.input :InventoryItem %>
+    <%= f.input :LegacyProduct %>
+    <%= f.input :LegCD %>
+    <%= f.input :LegInternational %>
+    <%= f.input :LegJustMan %>
+    <%= f.input :LegJustManDL %>
+    <%= f.input :LegManual %>
+    <%= f.input :LegNewCode %>
+    <%= f.input :LegPDFEmail %>
+    <%= f.input :LegUpgradeCode %>
+    <%= f.input :LegVol1Training %>
+    <%= f.input :LegVol2Training %>
+    <%= f.input :MultiPack %>
+    <%= f.input :Price %>
+    <%= f.input :PrintsInvoice %>
+    <%= f.input :ProductCode %>
+    <%= f.input :ProductDesc %>
+    <%= f.input :ProductParts %>
+    <%= f.input :SearchCode %>
+    <%= f.input :SendAnEmail %>
+    <%= f.input :Tag %>
+    <%= f.input :UnlockRequired %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
