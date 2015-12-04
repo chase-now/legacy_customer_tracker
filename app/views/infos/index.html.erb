@@ -1,0 +1,209 @@
+<h1>Listing infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>Anyflag</th>
+      <th>Authno</th>
+      <th>Billingaddress1</th>
+      <th>Billingaddress2</th>
+      <th>Billingcity</th>
+      <th>Billingcompany</th>
+      <th>Billingcountry</th>
+      <th>Billingemail</th>
+      <th>Billingemail2</th>
+      <th>Billingfirstname</th>
+      <th>Billinglastname</th>
+      <th>Billingphone</th>
+      <th>Billingstate</th>
+      <th>Billingzipcode</th>
+      <th>Cardnumber</th>
+      <th>Cashrecvd</th>
+      <th>Checknumber</th>
+      <th>City</th>
+      <th>Cnt2</th>
+      <th>Cnt1</th>
+      <th>Cnt3</th>
+      <th>Cnt4</th>
+      <th>Cnt5</th>
+      <th>Cnt6</th>
+      <th>Cnt8</th>
+      <th>Cnt9</th>
+      <th>Cnt10</th>
+      <th>Comment</th>
+      <th>Company</th>
+      <th>Conference</th>
+      <th>Country</th>
+      <th>Custpono</th>
+      <th>Custtype</th>
+      <th>Deleted</th>
+      <th>Didaffil</th>
+      <th>Didccrpt</th>
+      <th>Didemail</th>
+      <th>Didprint</th>
+      <th>Didshort</th>
+      <th>Didvisa</th>
+      <th>Done</th>
+      <th>Email</th>
+      <th>Email2</th>
+      <th>Expirdate</th>
+      <th>Fecustnum</th>
+      <th>Firstname</th>
+      <th>Flag1</th>
+      <th>Flag2</th>
+      <th>Flag8</th>
+      <th>Flag9</th>
+      <th>Flag10</th>
+      <th>Flag10</th>
+      <th>Freeupgrade</th>
+      <th>Gift</th>
+      <th>Gotemail</th>
+      <th>Invoiceno</th>
+      <th>Invtotal</th>
+      <th>Kind</th>
+      <th>Lastname</th>
+      <th>Noemailcontact</th>
+      <th>Noemailcontact</th>
+      <th>Oldrin</th>
+      <th>Orderdate</th>
+      <th>Ordertag</th>
+      <th>Origin</th>
+      <th>Otheramount</th>
+      <th>Otherdesc</th>
+      <th>Packslipcnt</th>
+      <th>Phone</th>
+      <th>Registerto</th>
+      <th>Salesperson</th>
+      <th>Salestax</th>
+      <th>Salestaxadj</th>
+      <th>Shipdate</th>
+      <th>Shippingchg</th>
+      <th>Shiptype</th>
+      <th>Shipvia</th>
+      <th>Shopordernum</th>
+      <th>Sitelicnum</th>
+      <th>State</th>
+      <th>Tagged</th>
+      <th>Taxexempt</th>
+      <th>Tempcustnum</th>
+      <th>Terms</th>
+      <th>Totalsale</th>
+      <th>Totalsale</th>
+      <th>Xdidaffil</th>
+      <th>Xdidprint</th>
+      <th>Xdidvisa</th>
+      <th>Xxrecnum</th>
+      <th>Zipcode</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @infos.each do |info| %>
+      <tr>
+        <td><%= info.Address1 %></td>
+        <td><%= info.Address2 %></td>
+        <td><%= info.AnyFlag %></td>
+        <td><%= info.AuthNo %></td>
+        <td><%= info.BillingAddress1 %></td>
+        <td><%= info.BillingAddress2 %></td>
+        <td><%= info.BillingCity %></td>
+        <td><%= info.BillingCompany %></td>
+        <td><%= info.BillingCountry %></td>
+        <td><%= info.BillingEmail %></td>
+        <td><%= info.BillingEmail2 %></td>
+        <td><%= info.BillingFirstName %></td>
+        <td><%= info.BillingLastName %></td>
+        <td><%= info.BillingPhone %></td>
+        <td><%= info.BillingState %></td>
+        <td><%= info.BillingZipCode %></td>
+        <td><%= info.CardNumber %></td>
+        <td><%= info.CashRecvd %></td>
+        <td><%= info.CheckNumber %></td>
+        <td><%= info.City %></td>
+        <td><%= info.Cnt2 %></td>
+        <td><%= info.Cnt1 %></td>
+        <td><%= info.Cnt3 %></td>
+        <td><%= info.Cnt4 %></td>
+        <td><%= info.Cnt5 %></td>
+        <td><%= info.Cnt6 %></td>
+        <td><%= info.Cnt8 %></td>
+        <td><%= info.Cnt9 %></td>
+        <td><%= info.Cnt10 %></td>
+        <td><%= info.Comment %></td>
+        <td><%= info.Company %></td>
+        <td><%= info.Conference %></td>
+        <td><%= info.Country %></td>
+        <td><%= info.CustPONo %></td>
+        <td><%= info.CustType %></td>
+        <td><%= info.Deleted %></td>
+        <td><%= info.DidAffil %></td>
+        <td><%= info.DidCCRpt %></td>
+        <td><%= info.DidEmail %></td>
+        <td><%= info.DidPrint %></td>
+        <td><%= info.DidShort %></td>
+        <td><%= info.DidVisa %></td>
+        <td><%= info.Done %></td>
+        <td><%= info.Email %></td>
+        <td><%= info.Email2 %></td>
+        <td><%= info.ExpirDate %></td>
+        <td><%= info.FECustNum %></td>
+        <td><%= info.FirstName %></td>
+        <td><%= info.Flag1 %></td>
+        <td><%= info.Flag2 %></td>
+        <td><%= info.Flag8 %></td>
+        <td><%= info.Flag9 %></td>
+        <td><%= info.Flag10 %></td>
+        <td><%= info.Flag10 %></td>
+        <td><%= info.FreeUpgrade %></td>
+        <td><%= info.Gift %></td>
+        <td><%= info.GotEmail %></td>
+        <td><%= info.InvoiceNo %></td>
+        <td><%= info.InvTotal %></td>
+        <td><%= info.Kind %></td>
+        <td><%= info.LastName %></td>
+        <td><%= info.NoEmailContact %></td>
+        <td><%= info.NoEmailContact %></td>
+        <td><%= info.OldRIN %></td>
+        <td><%= info.OrderDate %></td>
+        <td><%= info.OrderTag %></td>
+        <td><%= info.Origin %></td>
+        <td><%= info.OtherAmount %></td>
+        <td><%= info.OtherDesc %></td>
+        <td><%= info.PackSlipCnt %></td>
+        <td><%= info.Phone %></td>
+        <td><%= info.RegisterTo %></td>
+        <td><%= info.SalesPerson %></td>
+        <td><%= info.SalesTax %></td>
+        <td><%= info.SalesTaxAdj %></td>
+        <td><%= info.ShipDate %></td>
+        <td><%= info.ShippingChg %></td>
+        <td><%= info.ShipType %></td>
+        <td><%= info.ShipVia %></td>
+        <td><%= info.ShopOrderNum %></td>
+        <td><%= info.SiteLicNum %></td>
+        <td><%= info.State %></td>
+        <td><%= info.Tagged %></td>
+        <td><%= info.TaxExempt %></td>
+        <td><%= info.TempCustNum %></td>
+        <td><%= info.Terms %></td>
+        <td><%= info.TotalSale %></td>
+        <td><%= info.TotalSale %></td>
+        <td><%= info.xDidAffil %></td>
+        <td><%= info.xDidPrint %></td>
+        <td><%= info.xDidVisa %></td>
+        <td><%= info.xxRecNum %></td>
+        <td><%= info.ZipCode %></td>
+        <td><%= link_to 'Show', info %></td>
+        <td><%= link_to 'Edit', edit_info_path(info) %></td>
+        <td><%= link_to 'Destroy', info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Info', new_info_path %>
