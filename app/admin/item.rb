@@ -1,4 +1,5 @@
 ActiveAdmin.register Item do
+  permit_params :Code, :Desc, :Price, :Qty, :UnlockCode
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
