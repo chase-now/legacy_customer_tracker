@@ -1,0 +1,79 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  AltProductCode: MyString
+  AltProductDesc: MyString
+  AltSearchCode: MyString
+  Author: MyString
+  CatAddon: 1
+  CatBook: 1
+  CatOther: 1
+  CatQuickGuide: 1
+  CatWebinarCD: 1
+  CatWebinarSubsc: 1
+  Cost: 9.99
+  Current: false
+  DateAdded: 2015-12-04 23:57:30
+  DownloadOnly: false
+  InventoryID: 1
+  InventoryItem: false
+  LegacyProduct: false
+  LegCD: 1
+  LegInternational: 1
+  LegJustMan: 1
+  LegJustManDL: 1
+  LegManual: 1
+  LegNewCode: 1
+  LegPDFEmail: 1
+  LegUpgradeCode: 1
+  LegVol1Training: 1
+  LegVol2Training: 1
+  MultiPack: 1
+  Price: 9.99
+  PrintsInvoice: false
+  ProductCode: MyString
+  ProductDesc: MyString
+  ProductParts: MyText
+  SearchCode: MyString
+  SendAnEmail: false
+  Tag: false
+  UnlockRequired: false
+
+two:
+  AltProductCode: MyString
+  AltProductDesc: MyString
+  AltSearchCode: MyString
+  Author: MyString
+  CatAddon: 1
+  CatBook: 1
+  CatOther: 1
+  CatQuickGuide: 1
+  CatWebinarCD: 1
+  CatWebinarSubsc: 1
+  Cost: 9.99
+  Current: false
+  DateAdded: 2015-12-04 23:57:30
+  DownloadOnly: false
+  InventoryID: 1
+  InventoryItem: false
+  LegacyProduct: false
+  LegCD: 1
+  LegInternational: 1
+  LegJustMan: 1
+  LegJustManDL: 1
+  LegManual: 1
+  LegNewCode: 1
+  LegPDFEmail: 1
+  LegUpgradeCode: 1
+  LegVol1Training: 1
+  LegVol2Training: 1
+  MultiPack: 1
+  Price: 9.99
+  PrintsInvoice: false
+  ProductCode: MyString
+  ProductDesc: MyString
+  ProductParts: MyText
+  SearchCode: MyString
+  SendAnEmail: false
+  Tag: false
+  UnlockRequired: false
